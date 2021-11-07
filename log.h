@@ -34,6 +34,7 @@ void log(int level, const char* format, ...) {
     va_start(vargs, format);
     vprintf(format, vargs);
     printf("\n");
+    fflush(stdout);
     va_end(vargs);
 }
 
